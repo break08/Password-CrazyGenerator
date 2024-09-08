@@ -1,0 +1,1 @@
+x=msgbox("Click the Generate Button to Generate, nothing to copy" ,vbCritical, "Error")
