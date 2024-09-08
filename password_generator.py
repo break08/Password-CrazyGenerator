@@ -30,6 +30,34 @@ letters = [
     'y',
     'z'
 ]
+letters_upper = [
+    'A',
+    'B',
+    'C',
+    'D',
+    'E',
+    'F',
+    'G',
+    'H',
+    'I',
+    'J',
+    'K',
+    'L',
+    'M',
+    'N',
+    'O',
+    'P',
+    'Q',
+    'R',
+    'S',
+    'T',
+    'U',
+    'V',
+    'W',
+    'S',
+    'Y',
+    'Z'
+]
 num = [
     '1',
     '2',
@@ -56,7 +84,7 @@ sc = [
     '-',
     '_'
 ]
-list_all = [letters, num, sc]
+list_all = [letters, num, sc, letters_upper]
 def reset ():
     result.config (text = '')
     def generate ():
