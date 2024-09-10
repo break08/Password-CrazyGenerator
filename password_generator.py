@@ -141,6 +141,9 @@ def reset ():
             list_all.append(sc)       
         if status_emo.get() == 1:
             list_all.append(emoji)
+        if num_cha.get() == "":
+            error = os.path.join ('announce', 'error2.vbs')
+            os.startfile (error)
         result_now = result.cget ("text")
         limit = int(num_cha.get ())
         if len(result_now) < limit:
@@ -154,7 +157,7 @@ def copy ():
     pyperclip.copy (copy)
     if result.cget ("text") == "":
         file = os.path.join ('announce', 'error_no_num.vbs')
-        os.startfile (file)   
+        os.startfile (file)
 button = tk.Button (root, text = 'Generate Password', command = reset)
 button.place (x = 200, y = 250)
 copy_button = tk.Button (root, text = 'Copy password', command = copy)
