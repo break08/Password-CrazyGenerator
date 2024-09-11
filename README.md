@@ -20,6 +20,10 @@ The emojis can't show their colours in the results section (output off random pa
 
 **But if you copy and paste it in Microsoft Word, Web Browser, or password section of your account, it will show it colours**
 
+## Conditions for running the file
+
+Recommend Python 3.6+, must have `tkinter`, `os`, and `pyperclip`
+
 ## Next version
 
 Japanese, Chinese characters in Crazy Mode
