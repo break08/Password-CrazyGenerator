@@ -26,7 +26,11 @@ Recommend `Python 3.5 or newer`, must have `tkinter`, `os`, and `pyperclip`
 
 Install if you don't have some of them :
 
-`https://www.python.org/` - Python
+**Method 1** : Download Python on web and use `install_pip_pyperclip.bat` file.
+
+**Method 2** :
+
+Access `https://www.python.org/` address to download Python
 
 `python -m ensurepip --default-pip` - **Type this in cmd** to install pip to download the libraries
 
