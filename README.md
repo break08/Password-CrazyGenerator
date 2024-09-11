@@ -36,6 +36,7 @@ Install if you don't have some of them :
 
 `pip install pyperclip` - **Type in cmd** to install pyperclip libraries
 
+**Operating system** : Recommand Windows OS
 
 ## Next version
 
