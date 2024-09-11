@@ -22,7 +22,20 @@ The emojis can't show their colours in the results section (output off random pa
 
 ## Conditions for running the file
 
-Recommend Python 3.6+, must have `tkinter`, `os`, and `pyperclip`
+Recommend `Python 3.5 or newer`, must have `tkinter`, `os`, and `pyperclip`
+
+Install if you don't have some of them :
+
+`https://www.python.org/` - Python
+
+`python -m ensurepip --default-pip` - **Type this in cmd** to install pip to download the libraries
+
+`pip install tk` - Install tkinter libraries (must have pip) **(Type in cmd)**
+
+`os` library is available in python
+
+`pip install pyperclip` - **Type in cmd** to install pyperclip libraries
+
 
 ## Next version
 
