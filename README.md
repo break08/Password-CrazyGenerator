@@ -16,7 +16,7 @@ Step 2 :Click the generate button to generate
 
 ### Crazy mode
 
-The emojis can't show their colours in the results section (output off random password generated)
+The emojis can't show their colours in the results section (output of random password generated)
 
 **But if you copy and paste it in Microsoft Word, Web Browser, or password section of your account, it will show it colours**
 
