@@ -154,10 +154,11 @@ def reset ():
     generate()
 def copy ():
     copy = result.cget ("text")
-    pyperclip.copy (copy)
     if result.cget ("text") == "":
         file = os.path.join ('announce', 'error_no_num.vbs')
         os.startfile (file)
+    else:
+        pyperclip.copy (copy)
 button = tk.Button (root, text = 'Generate Password', command = reset)
 button.place (x = 200, y = 250)
 copy_button = tk.Button (root, text = 'Copy password', command = copy)
