@@ -18,7 +18,7 @@ Step 2 :Click the generate button to generate
 
 The emojis can't show their colours in the results section (output off random password generated)
 
-**But if you copy and paste it in Microsoft Word, Web Browser, or password section of your account, it will show it colours **
+**But if you copy and paste it in Microsoft Word, Web Browser, or password section of your account, it will show it colours**
 
 ## Next version
 
