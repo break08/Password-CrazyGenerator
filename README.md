@@ -30,11 +30,11 @@ Install if you don't have some of them :
 
 `python -m ensurepip --default-pip` - **Type this in cmd** to install pip to download the libraries
 
-`pip install tk` - Install tkinter libraries (must have pip) **(Type in cmd)**
+`tkinter` library is available in python
 
 `os` library is available in python
 
-`pip install pyperclip` - **Type in cmd** to install pyperclip libraries
+`pip install pyperclip` - **Type in cmd** to install pyperclip libraries (must have pip)
 
 **Operating system** : Recommand Windows OS
 
