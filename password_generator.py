@@ -1,7 +1,7 @@
 import tkinter as tk
 import random
 import pyperclip
-import os
+from tkinter import messagebox
 letters = [
     'a',
     'b',
@@ -191,11 +191,9 @@ def reset ():
         if status_chinese.get() == 1:
             list_all.append(chinese)             
         if num_cha.get() == "":
-            error = os.path.join ('announce', 'error2.vbs')
-            os.startfile (error)
+            messagebox.showerror("Error", "Type your number of characters you want in password")
         if status_cha.get() == 0 and status_upcha.get() == 0 and status_num.get() == 0 and status_sc.get() == 0 and status_emo.get() == 0 and status_hira.get() == 0 and status_kata.get() == 0 and status_chinese.get() == 0:
-            error_no_select = os.path.join ('announce', 'error_no_selection.vbs')
-            os.startfile (error_no_select)
+            messagebox.showerror("Error", "Choose your selection, you don't choose any option")
         result_now = result.cget ("text")
         limit = int(num_cha.get ())
         if len(result_now) < limit:
@@ -209,8 +207,7 @@ def reset ():
 def copy ():
     copy = result.cget ("text")
     if result.cget ("text") == "":
-        file = os.path.join ('announce', 'error_no_num.vbs')
-        os.startfile (file)
+        messagebox.showerror("Error", "Nothing to copy, type the number of characters then click the Generate Button")
     else:
         pyperclip.copy (copy)
 button = tk.Button (root, text = 'Generate Password', command = reset)
