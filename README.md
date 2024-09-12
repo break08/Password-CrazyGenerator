@@ -44,7 +44,7 @@ Access `https://www.python.org/` address to download Python
 
 ## Next version
 
-Japanese, Chinese characters in Crazy Mode
+Indian characters in Crazy Mode
 
 ## About
 
