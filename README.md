@@ -4,6 +4,12 @@
 
 This can generate passwords for users' accounts
 
+## In this version
+
+- Remove vbs file (error announce)
+
+- Use `from tkinter import messagebox` instead of (to show announce when detect error)
+
 ## How to use
 
 ### Normal use
