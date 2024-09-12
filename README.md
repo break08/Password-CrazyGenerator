@@ -48,6 +48,6 @@ Indian characters in Crazy Mode
 
 ## About
 
-Programming Languages : Python, VBScript
+Programming Languages : Python
 
 Author : break08 (Github)
