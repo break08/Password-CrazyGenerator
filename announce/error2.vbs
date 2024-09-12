@@ -1,1 +1,0 @@
-x=msgbox("Type your number of characters" ,vbCritical, "Error")

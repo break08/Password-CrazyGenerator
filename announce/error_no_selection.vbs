@@ -1,1 +1,0 @@
-x=msgbox("Choose the types of characters you want to have in your password, you did not choose any option" ,vbCritical, "Error")
