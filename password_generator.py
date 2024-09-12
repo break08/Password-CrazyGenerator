@@ -100,6 +100,40 @@ emoji = [
     "❤️", "💛", "💚", "💙", "💜", "🖤", "🤍", "🤎", "💔", "❣️",
     "👍", "👎", "👌", "✌️", "🤟", "👏", "🙌", "🙏", "🤝", "💪"
 ]
+hiragana = [
+    ['あ', 'い', 'う', 'え', 'お'],  
+    ['か', 'き', 'く', 'け', 'こ'], 
+    ['さ', 'し', 'す', 'せ', 'そ'], 
+    ['た', 'ち', 'つ', 'て', 'と'], 
+    ['な', 'に', 'ぬ', 'ね', 'の'],  
+    ['は', 'ひ', 'ふ', 'へ', 'ほ'],  
+    ['ま', 'み', 'む', 'め', 'も'],  
+    ['や', 'ゆ', 'よ'],  
+    ['ら', 'り', 'る', 'れ', 'ろ'], 
+    ['わ','を'],     
+    ['ん']
+]
+katakana = [
+    ['ア', 'イ', 'ウ', 'エ', 'オ'],  
+    ['カ', 'キ', 'ク', 'ケ', 'コ'],  
+    ['サ', 'シ', 'ス', 'セ', 'ソ'],  
+    ['タ', 'チ', 'ツ', 'テ', 'ト'],  
+    ['ナ', 'ニ', 'ヌ', 'ネ', 'ノ'],  
+    ['ハ', 'ヒ', 'フ', 'ヘ', 'ホ'],  
+    ['マ', 'ミ', 'ム', 'メ', 'モ'],  
+    ['ヤ', 'ユ', 'ヨ'],      
+    ['ラ', 'リ', 'ル', 'レ', 'ロ'],  
+    ['ワ', 'ヲ'],       
+    ['ン']                          
+]
+chinese = [
+    '的', '一', '是', '了', '我', '不', '人', '在', '他', '有', 
+    '这', '个', '上', '们', '中', '来', '大', '为', '和', '国', 
+    '地', '到', '以', '说', '时', '要', '就', '出', '会', '可', 
+    '也', '你', '对', '生', '能', '而', '子', '那', '得', '于', 
+    '着', '下', '自', '之', '年', '过', '发', '后', '作', '里'
+]
+
 list_all = []
 root = tk.Tk()
 root.title ('Password Generator')
@@ -127,6 +161,15 @@ sc_check.place (x = 50, y = 110)
 status_emo = tk.IntVar(value=0)
 emo_check = tk.Checkbutton (root, text = 'Include emoji', variable = status_emo)
 emo_check.place (x = 50, y = 150)
+status_hira = tk.IntVar(value=0)
+hira_check = tk.Checkbutton (root, text = 'Include Japanese Characters (Hiragana)', variable = status_hira)
+hira_check.place (x = 50, y = 170)
+status_kata = tk.IntVar(value=0)
+ka_check = tk.Checkbutton (root, text = 'Include Japanese Characters (Katakana)', variable = status_kata)
+ka_check.place (x = 50, y = 190)
+status_chinese = tk.IntVar(value=0)
+chinese_check = tk.Checkbutton (root, text = 'Include Chinese Characters', variable = status_chinese)
+chinese_check.place (x = 50, y = 210)
 def reset ():
     result.config (text = '')
     list_all.clear()
@@ -141,14 +184,25 @@ def reset ():
             list_all.append(sc)       
         if status_emo.get() == 1:
             list_all.append(emoji)
+        if status_hira.get() == 1:
+            list_all.append(hiragana)  
+        if status_kata.get() == 1:
+            list_all.append(katakana)
+        if status_chinese.get() == 1:
+            list_all.append(chinese)             
         if num_cha.get() == "":
             error = os.path.join ('announce', 'error2.vbs')
             os.startfile (error)
+        if status_cha.get() == 0 and status_upcha.get() == 0 and status_num.get() == 0 and status_sc.get() == 0 and status_emo.get() == 0 and status_hira.get() == 0 and status_kata.get() == 0 and status_chinese.get() == 0:
+            error_no_select = os.path.join ('announce', 'error_no_selection.vbs')
+            os.startfile (error_no_select)
         result_now = result.cget ("text")
         limit = int(num_cha.get ())
         if len(result_now) < limit:
             random_list = random.choice (list_all)
             random_cha = random.choice (random_list)
+            if isinstance(random_cha, list):
+             random_cha = random.choice(random_cha)
             result.config (text = result_now + random_cha)
             root.after (50, generate)
     generate()
