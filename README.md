@@ -8,7 +8,7 @@ This can generate passwords for users' accounts
 
 - Renamed and updated icon for software
 
-- Add HTML file to use when you don't have python
+- Add HTML file to use when you don't have python, convert from py to HTML by AI ChatGPT
 
 ## How to use
 
