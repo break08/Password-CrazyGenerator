@@ -14,7 +14,7 @@ This can generate passwords for users' accounts
 
 ### Normal use
 
-**You can HTML filefile (password_generator_browser.html) if you don't have python**
+**You can HTML file (password_generator_browser.html) if you don't have python**
 
 Step 1 :Type the number of characters of your password
 
