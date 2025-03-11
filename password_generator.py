@@ -2,6 +2,7 @@ import tkinter as tk
 import random
 import pyperclip
 from tkinter import messagebox
+import subprocess
 letters = [
     'a',
     'b',
@@ -136,7 +137,9 @@ chinese = [
 
 list_all = []
 root = tk.Tk()
-root.title ('Password Generator')
+root.title ('Password CrazyGenerator')
+icon = tk.PhotoImage(file="icon.png")
+root.iconphoto(True, icon)
 root.geometry ('500x500')
 info_1 = tk.Label (root, text = 'Type your number of character here: ')
 info_1.place (x = 50, y = 10)
@@ -210,6 +213,14 @@ def copy ():
         messagebox.showerror("Error", "Nothing to copy, type the number of characters then click the Generate Button")
     else:
         pyperclip.copy (copy)
+    def check_pip():
+        try:
+            result = subprocess.run(["pip", "--version"], capture_output=True, text=True)
+            if result.returncode == 1:
+                messagebox.showerror("Error", "Pip is not found, Password Generator need pip to copy")
+        except FileNotFoundError:
+                messagebox.showerror("Error", "Pip is not found, Password Generator need pip to copy")
+    check_pip()
 button = tk.Button (root, text = 'Generate Password', command = reset)
 button.place (x = 200, y = 250)
 copy_button = tk.Button (root, text = 'Copy password', command = copy)
