@@ -6,21 +6,21 @@ This can generate passwords for users' accounts
 
 ## In this version
 
-- Remove vbs file (error announce)
+- Renamed and updated icon for software
 
-- Use `from tkinter import messagebox` instead of (to show announce when detect error)
+- Add HTML file to use when you don't have python
 
 ## How to use
 
 ### Normal use
 
-**You can run exe file if you don't have python**
+**You can HTML filefile (password_generator_browser.html) if you don't have python**
 
 Step 1 :Type the number of characters of your password
 
 Step 2 :Click the generate button to generate
 
-### Crazy mode
+## Crazy mode
 
 The emojis can't show their colours in the results section (output of random password generated)
 
