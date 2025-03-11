@@ -10,17 +10,7 @@ This can generate passwords for users' accounts
 
 - Use `from tkinter import messagebox` instead of (to show announce when detect error)
 
-## How to use
-
-### Normal use
-
-**You can run exe file if you don't have python**
-
-Step 1 :Type the number of characters of your password
-
-Step 2 :Click the generate button to generate
-
-### Crazy mode
+## Crazy mode
 
 The emojis can't show their colours in the results section (output of random password generated)
 
